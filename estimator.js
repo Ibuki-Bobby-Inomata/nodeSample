@@ -79,7 +79,8 @@ window.addEventListener('load', async () => {
         changeActionText(argMax(pred_data));
 
         // 推定データのログ表示
-        logElm.innerText += `0: ${pred_data[0]}   |   1: ${pred_data[1]}   |    2: ${pred_data[2]}   |   3: ${pred_data[3]}\n`;
+        // logElm.innerText += `0: ${pred_data[0]}   |   1: ${pred_data[1]}   |    2: ${pred_data[2]}   |   3: ${pred_data[3]}\n`;
+        logElm.innerText += `${processedData[0]}\n`;
         logElm.innerText += `--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n`;
         logElm.scrollTop = logElm.scrollHeight;
     };
