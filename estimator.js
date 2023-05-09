@@ -117,6 +117,8 @@ window.addEventListener('load', async () => {
         const acc = Math.sqrt(Math.pow(data.acc_x, 2) + Math.pow(data.acc_y, 2) + Math.pow(data.acc_z, 2));
         const acc_fin = acc / 319.57; // 0 ~ 1 の間で正規化を行っている`
 
+        console.log(acc)
+
         const acc_z_max = data.acc_z + 26; // 最大値が 26 までだったので正規化、機械学習モデルが学習しやすい形に変換するため（0 ~ 1 の間で表現できると良いため）
         const acc_z_fin = (acc_z_max - 7) / (51 - 7);
 
