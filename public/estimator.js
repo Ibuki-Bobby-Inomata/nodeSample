@@ -1,3 +1,4 @@
+// 姿勢を分類
 window.addEventListener('load', async () => {
 
     const modelPath = `${window.location.href}assets/model.json`;
@@ -80,13 +81,13 @@ window.addEventListener('load', async () => {
 
         // 推定データのログ表示
         // logElm.innerText += `0: ${pred_data[0]}   |   1: ${pred_data[1]}   |    2: ${pred_data[2]}   |   3: ${pred_data[3]}\n`;
-        logElm.innerText += `${processedData[0]}\n`;
-        logElm.innerText += `--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n`;
-        logElm.scrollTop = logElm.scrollHeight;
+        // logElm.innerText += `${processedData[0]}\n`;
+        // logElm.innerText += `--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n`;
+        // logElm.scrollTop = logElm.scrollHeight;
     };
 
     const changeActionText = (pred_index) => {
-        const actionText = ['直立、着席', '歩行', '階段（上り下り）', '寝ている', '商品', '看板'];
+        const actionText = ['直立、着席', '歩行', '階段（上り下り）', '寝ている'];
         const actionTextElm = document.getElementById('action');
         actionTextElm.textContent = actionText[pred_index];
     };
@@ -187,3 +188,4 @@ window.addEventListener('load', async () => {
             + "do_gamma: " + sensorData.do_gamma;
     }
 });
+
